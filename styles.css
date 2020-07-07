@@ -1,0 +1,153 @@
+:root {
+  --numRows: null;
+  --tileWidth: null;
+  --tileHeight: null;
+}
+
+body {
+  background: #6a96a4;
+}
+
+#page {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-areas: 
+  'header header header'
+  'left1 puzzle right1'
+  'left2 puzzle right2'
+  'left3 puzzle right3'
+  'footer footer footer'
+  'bottom bottom bottom'
+  'bottom bottom bottom'
+  'ps ps ps';       
+  grid-gap: 10px;
+  align-items: center;
+  justify-items: center;
+  padding-left: 50px;
+  padding-right: 50px; 
+}
+
+.container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(var(--numRows), auto);
+  grid-template-rows: repeat(var(--numRows), auto);
+  grid-gap: 5px; 
+  grid-area: puzzle;
+  outline: 11px dashed white; 
+  background: white;
+}
+
+/* Generate all the tile and background stuff using JS */
+.tile {
+  background: url(dog.jpeg) no-repeat;
+  height: var(--tileHeight);
+  width: var(--tileWidth);
+  background-clip: content-box;
+}
+
+.paused {
+  filter: blur(60px);
+}
+
+.title{
+  grid-area: header;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  margin-top: 10px;
+  margin-bottom: 0; 
+}
+
+.difficulty {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  width:75%;
+}
+
+.start-easy{
+  grid-area: left1;
+}
+
+.start-medium{
+  grid-area: left2;
+}
+
+.start-hard{
+  grid-area: left3;
+}
+
+.move-count {
+  grid-area: right1;
+  text-align: center;
+}
+
+.move-counter {
+  font-family:American Typewriter, serif;
+  font-weight: bold;  
+  font-size:35px;
+  margin-bottom: 0px;
+}
+
+.moves {
+  font-family:American Typewriter, serif;
+  font-weight: bold;  
+  font-size:15px;
+  margin-top: 0px;
+}
+
+.timer{
+  grid-area: right2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  height: 70%;
+  width: 50%;
+  text-align: center;
+  border: 10px solid black;
+}
+
+.timer-text {
+  font-family:American Typewriter, serif;
+  font-weight: bold;  
+  font-size:30px;
+}
+
+.pause-resume {
+  grid-area:right3;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: Marker Felt, fantasy;
+  width:75%;
+}
+
+/* 
+.button {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ed3330;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  height:50%;
+}
+
+.button:hover {
+  background: #434343;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+} */
