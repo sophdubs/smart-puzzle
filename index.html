@@ -27,8 +27,16 @@
 
     <button class="pause-resume button ">PAUSE</button>
 
-    <button>RESET</button>
-    <button class="solve-button">SOLVE</button>
+    <button class="solve-button button">SOLVE</button>
+    
+    <div id="modal" class="modal modal-no-show">
+      <p class="modal-close">X</p>
+      <div>
+          <h2>Congratulations!</h2>
+          <h4>You solved the puzzle!</h4>
+        </div>
+    </div>
+  
   </div>
 
   <script src="https://unpkg.com/animate-css-grid@latest"></script>
@@ -36,6 +44,7 @@
   <script src="priorityQueue.js"></script>
   <script src="solver.js"></script>
   <script src="features.js"></script>
+  <script src="modal.js"></script>
   <script src="gameLogic.js"></script>
   
 </body>
