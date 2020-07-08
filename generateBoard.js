@@ -56,15 +56,6 @@ function createTiles(board) {
     addEventListeners();
 }
 
-function startGame(n) {
-  [gameBoard, blankTile] = generateBoard(n);
-  adjustStyles(n);
-  createTiles(gameBoard);
-  updateTilePositions();
-}
-
-startGame(3);
-
 
 
 
