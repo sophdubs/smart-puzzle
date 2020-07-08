@@ -26,9 +26,7 @@ let puzzleContainer = document.querySelector('.container');
 pauseResume.addEventListener('click', handlePauseResume);
 
 function handlePauseResume() {
-    if (hackerMode){
-        solvePuzzle(gameBoard);
-    }else if (pauseResume.innerHTML === 'PAUSE') {
+    if (pauseResume.innerHTML === 'PAUSE') {
         timer(Date.now(), true);
         pauseResume.innerHTML = 'RESUME';
         puzzleContainer.classList.toggle('paused');
@@ -44,6 +42,12 @@ let moveCounter = document.querySelector('.move-counter');
 function updateMoveCounter() {
     moveCounter.innerHTML= gScore;
 }
+
+// Solve button
+let solveButton = document.querySelector('.solve-button');
+solveButton.addEventListener('click', () => {
+    solvePuzzle(gameBoard);
+})
 
 
 function htmlToCount(html) {
