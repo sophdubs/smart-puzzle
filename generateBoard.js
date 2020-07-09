@@ -9,7 +9,6 @@ let layouts = {
     5:'"a b c d e" "f g h i j" "1k l m n o" "p q r s t" "u v w x y"'
 }
 
-
 //Generates a board of size n^2
 //Generates the board and stores it in Gameboard.
 //Stores the coordinates of the blank tile in blankTile. 

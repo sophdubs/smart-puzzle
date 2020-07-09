@@ -26,14 +26,17 @@ let puzzleContainer = document.querySelector('.container');
 pauseResume.addEventListener('click', handlePauseResume);
 
 function handlePauseResume() {
-    if (pauseResume.innerHTML === 'PAUSE') {
-        timer(Date.now(), true);
-        pauseResume.innerHTML = 'RESUME';
-        puzzleContainer.classList.toggle('paused');
-    } else {
-        pauseResume.innerHTML = 'PAUSE';
-        timer(Date.now());
-        puzzleContainer.classList.toggle('paused');
+    if (started) {
+        if (pauseResume.innerHTML === 'pause') {
+            timer(Date.now(), true);
+            pauseResume.innerHTML = 'resume';
+            puzzleContainer.classList.toggle('paused');
+        } else {
+            pauseResume.innerHTML = 'pause';
+            timer(Date.now());
+            puzzleContainer.classList.toggle('paused');
+        }
+
     }
 }
 

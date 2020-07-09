@@ -110,7 +110,6 @@ let startHardButton = document.querySelector('.start-hard');
 
 
 startEasyButton.addEventListener('click', () => {
-    console.log('start easyyyyy');
     if (!started) {
         difficulty = 'easy';
         handleStartGame(EASY);
@@ -159,3 +158,4 @@ function puzzleIsSolved() {
     timer(Date.now(), true);
     setTimeout(showModal, 500);
 }
+

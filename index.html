@@ -4,39 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Maven+Pro&family=Poiret+One&display=swap" rel="stylesheet">
   <title>Smart Puzzle</title>
 </head>
 <body>
   <div id="page">
-    <h1 class="title">Smart Puzzle</h1>
+    <h1 class="title">smart puzzle</h1>
 
     <div id="puzzle-container" class="container"></div>
     
-    <button class="start-easy button difficulty">Easy</button>
-    <button class="start-medium button difficulty">Medium</button>
-    <button class="start-hard button difficulty">Hard</button>
+    <button class="start-easy button difficulty">easy</button>
+    <button class="start-medium button difficulty">medium</button>
+    <button class="start-hard button difficulty">hard</button>
             
     <div class="move-count">
         <p class="move-counter">0</p>
-        <p class="moves">MOVES</p>
+        <p class="moves">moves</p>
     </div>
 
     <div class="timer">
         <p class="timer-text">00:00</p>
     </div>
 
-    <button class="pause-resume button ">PAUSE</button>
+    <button class="pause-resume button ">pause</button>
 
-    <button class="solve-button button">SOLVE</button>
+    <button class="solve-button button">solve</button>
     
-    <div id="modal" class="modal modal-no-show">
-      <p class="modal-close">X</p>
-      <div>
-          <h2>Congratulations!</h2>
-          <h4>You solved the puzzle!</h4>
-        </div>
-    </div>
-  
+    
+  </div>
+  <div id="modal" class="modal modal-no-show">
+    <p class="modal-close">X</p>
+    <div>
+        <h1>Congratulations!</h1>
+        <h3>You solved the puzzle</h3>
+        <p>Move count: <span class="modal-move-count"></span></p>
+        <p>Time elapsed: <span class="modal-time"></span></p>
+        <img class="coffee-icon" src="coffee-icon-png-13667.png" alt="coffee">
+      </div>
   </div>
 
   <script src="https://unpkg.com/animate-css-grid@latest"></script>

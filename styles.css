@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #6a96a4;
+  background: #87adb8cf;
 }
 
 #page {
@@ -19,15 +19,13 @@ body {
   'left1 puzzle right1'
   'left2 puzzle right2'
   'left3 puzzle right3'
-  'footer footer footer'
   'bottom bottom bottom'
-  'bottom bottom bottom'
-  'ps ps ps';       
+  'footer footer footer';
+      
   grid-gap: 10px;
   align-items: center;
   justify-items: center;
-  padding-left: 50px;
-  padding-right: 50px; 
+  padding: 25px 50px;
 }
 
 .container {
@@ -37,13 +35,12 @@ body {
   grid-template-rows: repeat(var(--numRows), auto);
   grid-gap: 5px; 
   grid-area: puzzle;
-  outline: 11px dashed white; 
+  outline: 11px solid white; 
   background: white;
 }
 
-/* Generate all the tile and background stuff using JS */
 .tile {
-  background: url(dog.jpeg) no-repeat;
+  background: url(coffee.jpeg) no-repeat;
   height: var(--tileHeight);
   width: var(--tileWidth);
   background-clip: content-box;
@@ -57,17 +54,12 @@ body {
   grid-area: header;
   text-align: center;
   font-size: 80px;
-  font-weight: bold;
-  font-family: Marker Felt, fantasy;
+  background: rgba(255, 255, 255, 0.262);
+  font-family: 'Josefin Slab', serif;
   margin-top: 10px;
-  margin-bottom: 0; 
-}
-
-.difficulty {
-  font-size: 45px;
-  font-weight: bold;
-  font-family: Marker Felt, fantasy;
-  width:75%;
+  margin-bottom: 0;
+  padding: 0px 15px 10px; 
+  color: rgb(79, 20, 20);
 }
 
 .start-easy{
@@ -87,17 +79,21 @@ body {
   text-align: center;
 }
 
+.solve-button {
+  grid-area: bottom;
+}
+
 .move-counter {
-  font-family:American Typewriter, serif;
-  font-weight: bold;  
+  color: rgb(79, 20, 20);
+  font-family: 'Josefin Slab', serif;
   font-size:35px;
   margin-bottom: 0px;
 }
 
 .moves {
-  font-family:American Typewriter, serif;
-  font-weight: bold;  
-  font-size:15px;
+  color: rgb(79, 20, 20);
+  font-family: 'Josefin Slab', serif;
+  font-size: 25px;
   margin-top: 0px;
 }
 
@@ -106,32 +102,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.413);
   border-radius: 50%;
   height: 70%;
   width: 50%;
   text-align: center;
-  border: 10px solid black;
+  border: 5px solid rgb(79, 20, 20);
 }
 
 .timer-text {
-  font-family:American Typewriter, serif;
+  color: rgb(79, 20, 20);
+  font-family: 'Josefin Slab', serif;
   font-weight: bold;  
   font-size:30px;
 }
 
 .pause-resume {
   grid-area:right3;
-  font-size: 45px;
-  font-weight: bold;
-  font-family: Marker Felt, fantasy;
-  width:75%;
 }
 
 #modal {
   width: 500px;
-  height: 575px;
-  background: red;
+  height: 300px;
+  padding-top: 30px;
+  background: rgba(255, 255, 255, 0.605);
 }
 
 .modal-no-show {
@@ -141,9 +135,17 @@ body {
 .modal-show {
   display: block;
   position: absolute;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  color: rgb(79, 20, 20);
   top: 24%;
-  left:30%;
-  z-index: 20;
+  left:32.5%;
+  z-index: 5;
+}
+
+.coffee-icon {
+  width: 15%;
+  height: auto;
 }
 
 .modal-open {
@@ -154,31 +156,30 @@ body {
   position: absolute;
   right: 4%;
   top: 1%;
-  font-family: Marker Felt, fantasy;
-  color: white;
+  color: rgb(79, 20, 20);
 }
 
+.modal-close:hover {
+  cursor: pointer;
+}
 
-/* 
 .button {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #ed3330;
-  padding: 20px;
-  border-radius: 5px;
-  display: inline-block;
+  font-family: 'Josefin Slab', serif;
+  font-size: 40px;
+  padding-bottom: 5px;
+  width: 60%;
+  color: rgb(79, 20, 20);
+  background: rgb(243, 233, 207);
   border: none;
   transition: all 0.4s ease 0s;
-  height:50%;
 }
 
 .button:hover {
-  background: #434343;
+  background: rgb(230, 192, 131);
   letter-spacing: 1px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
   transition: all 0.4s ease 0s;
   cursor: pointer;
-} */
+} 
