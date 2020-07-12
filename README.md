@@ -1,5 +1,8 @@
 # Smart Puzzle
 
+![](smart_puzzle.gif)
+
+## Project Description
 Smart puzzle is a seemingly simple puzzle app with a built in solver. The solver uses the A* path finding algorithm to determine the sequence of moves required to solve the puzzle with the fewest moves. 
 
 This project is hosted on GH pages and can be found here:   
